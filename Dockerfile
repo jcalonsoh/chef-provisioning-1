@@ -6,7 +6,7 @@ RUN yum update -y && yum install -y git libxml2-devel libxslt-devel nano emacs v
     && echo 'eval "$(chef shell-init bash)"' >> .bash_profile && chef gem install chef-provisioning-vsphere -v 0.10.0 \
     && rm -f chefdk-1.1.16-1.el7.x86_64.rpm
 
-RUN chef gem install chef-provisioning -v 2.1.1 && chef gem uninstall chef-provisioning -v 2.0.2
+RUN chef gem install chef-provisioning -v 2.1.1
 
 CMD ["/bin/bash"]
 
